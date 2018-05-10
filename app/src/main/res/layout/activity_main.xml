@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@mipmap/ic_forground_server_room">
+
+
+    <TextView
+        android:id="@+id/securityTextView"
+        android:layout_width="180dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/holo_blue_light"
+        android:text="Security App 1.0.0"
+        android:textColor="@android:color/background_light"
+        android:alpha="0.8"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/netScanButton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/securityTextView"
+        android:alpha="0.7"
+        android:background="@android:color/background_dark"
+        android:text="Network Scan"
+        android:textColor="@android:color/background_light"/>
+
+    <Button
+        android:id="@+id/trafficStatsButton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/netScanButton"
+        android:alpha="0.7"
+        android:background="@android:color/background_dark"
+        android:text="Traffic Stats"
+        android:textColor="@android:color/background_light"/>
+
+
+
+    <Button
+        android:id="@+id/threatsDetectButton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/trafficStatsButton"
+        android:alpha="0.7"
+        android:background="@android:color/background_dark"
+        android:text="Threats Detect"
+        android:textColor="@android:color/background_light"/>
+
+    <Button
+        android:id="@+id/blockedDevicesButton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/threatsDetectButton"
+        android:alpha="0.7"
+        android:background="@android:color/background_dark"
+        android:text="Blocked Devices"
+        android:textColor="@android:color/background_light"/>
+
+
+    <Button
+        android:id="@+id/systemUpdatesButton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/blockedDevicesButton"
+        android:alpha="0.7"
+        android:background="@android:color/background_dark"
+        android:text="System Updates"
+        android:textColor="@android:color/background_light"/>
+
+    <Button
+        android:id="@+id/systemReportsButton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/systemUpdatesButton"
+        android:alpha="0.7"
+        android:background="@android:color/background_dark"
+        android:text="System Reports"
+        android:textColor="@android:color/background_light"/>
+
+    <Button
+        android:id="@+id/adminUsers"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/systemReportsButton"
+        android:alpha="0.7"
+        android:background="@android:color/background_dark"
+        android:text="Admin Users"
+        android:textColor="@android:color/background_light"/>
+
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/adminUsers"
+        android:alpha="0.7"
+        android:background="@android:color/background_dark"
+        android:text="About"
+        android:textColor="@android:color/background_light"/>
+
+</RelativeLayout>

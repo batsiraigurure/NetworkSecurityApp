@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/threatsByDevice"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Threats By Device"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="250dp"
+        android:layout_height="138dp"
+        android:layout_below="@+id/threatsByDevice"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@mipmap/ic_forground_threats_by"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/usageByDevice"
+        android:layout_below="@id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:text="Network Usage By Device"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="38dp"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="247dp"
+        android:layout_height="167dp"
+        android:layout_below="@+id/usageByDevice"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@mipmap/ic_forground_data_usage"/>
+
+    <Button
+        android:id="@+id/exportButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView4"
+        android:layout_marginLeft="16dp"
+        android:text="Export(PDF)"/>
+
+    <Button
+        android:id="@+id/emailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:text="Email"/>
+
+    <Button
+        android:id="@+id/printButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView4"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:text="Print"/>
+
+
+</RelativeLayout>

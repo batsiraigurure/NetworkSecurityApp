@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewUserActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heading"
+        android:text="New User Creation"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:layout_marginTop="22dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/sysFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/heading"
+        android:layout_marginTop="24dp"
+        android:hint="Firstname"/>
+
+    <EditText
+        android:id="@+id/sysSurName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/sysFirstName"
+        android:layout_marginTop="10dp"
+        android:hint="Surname"/>
+
+    <EditText
+        android:id="@+id/designation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/sysSurName"
+        android:layout_marginTop="30dp"
+        android:hint="Designated Title"/>
+
+    <EditText
+        android:id="@+id/sysUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/designation"
+        android:layout_marginTop="10dp"
+        android:hint="Username"/>
+
+    <EditText
+        android:id="@+id/sysPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/sysUsername"
+        android:layout_marginTop="10dp"
+        android:hint="Password"/>
+
+    <Button
+        android:id="@+id/createUserButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/heading"
+        android:layout_alignLeft="@id/heading"
+        android:layout_marginBottom="67dp"
+        android:text="Create User"/>
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/createUserButton"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:text="Clear Button"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="137dp">
+
+        <RadioButton
+            android:id="@+id/radioNetworkAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Network Administrator"/>
+
+        <RadioButton
+            android:id="@+id/radioAdminAssistant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Admin Assistant"/>
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="43dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/heading"
+        android:layout_marginStart="20dp"
+        app:srcCompat="@mipmap/ic_launcher_round"/>
+
+
+</RelativeLayout>

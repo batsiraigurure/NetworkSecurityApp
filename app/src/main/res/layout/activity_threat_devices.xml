@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThreatDevicesActivity"
+    android:background="@mipmap/ic_forground_server_room">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Compromised Devices"
+        android:textColor="@android:color/background_light"
+        android:textSize="28dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/compromisedList"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:alpha="0.7"
+        android:background="@android:color/background_dark"
+        android:lines="2"
+        android:text="1) 00:1C:B3:09:85:15-----(Mobile device) \n2) 0A:00:27:00:00:2B-----(Wired device)"
+        android:textColor="@android:color/background_light"/>
+
+    <TextView
+        android:id="@+id/threatsFound"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/compromisedList"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:alpha="0.7"
+        android:background="@android:color/background_dark"
+        android:lines="8"
+        android:text="****wannacry.jar***\n***foldercopy.exe***\n***applicationmal.exe***\n****wannacry.jar***\n***foldercopy.exe***\n***applicationmal.exe***\n***sportdrop.exe***\n***wannacry.exe***"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"/>
+
+    <Button
+        android:id="@+id/blockButton"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="226dp"
+        android:background="@android:color/holo_red_dark"
+        android:alpha="0.8"
+        android:text="Block Devices"
+        android:textColor="@android:color/background_light"/>
+
+</RelativeLayout>
