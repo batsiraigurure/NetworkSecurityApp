@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     Button newUser;
     Button trafficStats;
     Button systemReports;
+    Button threatsDetect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         newUser = findViewById(R.id.adminUsers);
         trafficStats = findViewById(R.id.trafficStatsButton);
         systemReports = findViewById(R.id.systemReportsButton);
+        threatsDetect = findViewById(R.id.threatsDetectButton);
 
         networkScan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ReportsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        threatsDetect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ThreatDevicesActivity.class);
                 startActivity(intent);
             }
         });

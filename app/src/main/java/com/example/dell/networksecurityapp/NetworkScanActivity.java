@@ -15,7 +15,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
 import java.net.InetAddress;
@@ -47,6 +46,8 @@ public class NetworkScanActivity extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
             Log.d(TAG, "Let's sniff the network");
 
+            final StringBuilder displayText= new StringBuilder();
+
 
             try {
                 Context context = mContextRef.get();
@@ -68,35 +69,36 @@ public class NetworkScanActivity extends AppCompatActivity {
                     String prefix = ipString.substring(0, ipString.lastIndexOf(".") + 1);
                     Log.d(TAG, "prefix: " + prefix);
 
-                    for (int i = 0; i < 255; i++) {
+                    for (int i = 0; i < 50; i++) {
                         String testIp = prefix + String.valueOf(i);
 
                         InetAddress address = InetAddress.getByName(testIp);
-                        boolean reachable = address.isReachable(100000);
+                        boolean reachable = address.isReachable(1000);
                         final String hostName = address.getCanonicalHostName();
 
 
                         if (reachable) {
-                            Log.i(TAG, "Host: " + String.valueOf(hostName) + "(" + String.valueOf(testIp) + ")-----Device Connected!");
+                            Log.i(TAG, "Host: " + String.valueOf(hostName) + "(" + String.valueOf(testIp) + ")---Device Connected!");
 
-                            final String displayText = "Host: " + String.valueOf(hostName) + "(" + String.valueOf(testIp) + ")-----Device Connected!";
+                            displayText.append("* Host: " + String.valueOf(hostName) + "(" + String.valueOf(testIp) + ")---Device Connected!" + "\n\n");
 
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    netScan.setText(displayText);
-                                }
-                            });
 
 
                         }
+
+
                     }
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            netScan.setText(displayText);
+                        }
+                    });
                 }
             } catch (Throwable t) {
                 Log.e(TAG, "Well that's not good.", t);
             }
-
-
 
 
             return null;

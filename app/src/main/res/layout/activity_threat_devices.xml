@@ -20,30 +20,25 @@
         android:textSize="28dp"
         android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/compromisedList"
-        android:layout_width="300dp"
+    <ProgressBar
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/heading"
+        android:id="@+id/progressScanning"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:alpha="0.7"
-        android:background="@android:color/background_dark"
-        android:lines="2"
-        android:text="1) 00:1C:B3:09:85:15-----(Mobile device) \n2) 0A:00:27:00:00:2B-----(Wired device)"
-        android:textColor="@android:color/background_light"/>
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/heading"/>
 
     <TextView
         android:id="@+id/threatsFound"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/compromisedList"
+        android:layout_below="@id/progressScanning"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
         android:alpha="0.7"
         android:background="@android:color/background_dark"
         android:lines="8"
-        android:text="****wannacry.jar***\n***foldercopy.exe***\n***applicationmal.exe***\n****wannacry.jar***\n***foldercopy.exe***\n***applicationmal.exe***\n***sportdrop.exe***\n***wannacry.exe***"
+        android:text="Scanning for threats..."
         android:textAlignment="center"
         android:textColor="@android:color/background_light"/>
 
